@@ -61,16 +61,10 @@ $(function(){
       '</div>'+
     '</article>';
 
-    $.ajax({
-    url: 'http://gateway.marvel.com:80/v1/public/characters?orderBy=name&limit=100&apikey=d18b9ec019b4185b639784f1698c9089',
-    success: function (res, textStatus, xhr){
+    $.ajax('http://gateway.marvel.com:80/v1/public/characters?orderBy=name&limit=100&apikey=d18b9ec019b4185b639784f1698c9089')
+      .then(function (res){
       $('#app-container').find('.loader').remove();
-
       var result = res.data.results;
       renderResults(result);
-
-    }
     })
-
-
 });
