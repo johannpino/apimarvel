@@ -1,0 +1,24 @@
+@media only screen and (max-width: 992px) {
+
+
+}
+@media only screen and (max-width: 768px) {
+
+  #app-header h1 {
+    font-size: 2.5em;
+  }
+  #app-container{
+    padding-top: 25vh;
+  }
+  .search-form input[type="text"]{
+    padding:10px;
+    width: 85%;
+    font-size: 20px;
+    color: red;
+    height: 10vh;
+    border: 0px;
+    border-radius: 0;
+    float: left;
+  }
+
+ }

@@ -4,7 +4,6 @@ $(function(){
 
   $container.on('click', 'button.like', function (ev){
     var $this = $(this);
-    debugger
     $this.closest('.character-marvel').addClass('danger')
   })
 
@@ -30,7 +29,7 @@ $(function(){
   /**
   * Submit search form
   */
-  $("#app-container")
+  $("#app-header")
     .find('form')
     .submit(function(ev){
       ev.preventDefault();
@@ -59,13 +58,12 @@ $(function(){
 
     });
 
-    var template = '<article class="character-marvel">'+
-      '<div class="left">'+
-          '<img src=":img:" alt=":img alt:" />'+
+    var template = '<article class="character-marvel  col-md-3 col-sm-6">'+
+      '<div class="left col-md-12">'+
+          '<img src=":img:" class="col-md-12" alt=":img alt:" />'+
       '</div>' +
-      '<div class="info">'+
+      '<div class="info col-md-12">'+
         '<h1>:name:</h1>' +
-        '<button class="like">💖</button>'+
       '</div>'+
     '</article>';
     if (!localStorage.results) {

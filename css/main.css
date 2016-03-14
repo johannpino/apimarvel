@@ -8,21 +8,38 @@ body{
 
 #app-header{
   width: 100%;
-  height: 10vh;
+  min-height: 10vh;
   position: fixed;
   background: rgb(255, 0, 0);
   text-align: center;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+  z-index: 10;
+  overflow: hidden;
+}
+#app-header a{
+  color: white;
+}
+#app-header a:hover{
+  text-decoration: none;
+}
+.search-view.col-md-4{
+  padding: 0;
 }
 #app-header h1{
-  line-height: 10vh;
   color: white;
-  font-size: 2em;
+  font-size: 2.8em;
+  margin-top: 10px;
+  text-align: left;
+  margin-left: 40px;
   font-weight:800;
+  text-shadow: 0px 0px 30px rgba(150, 150, 150, 1);
 }
 
 #app-container{
   padding-top: 15vh;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   min-height: 75vh;
 }
@@ -41,56 +58,76 @@ body{
 .character-marvels{
   width: 100%;
   overflow: hidden;
-  padding: 16px;
   background-color: white;
   margin-bottom: 16px;
 }
 
 .character-marvel{
-  width: 30%;
   float: left;
-  margin: 1%;
   text-align: center;
+  margin: 0 auto 20px;
 }
-.character-marvel:hover{
-  background-color: #ffebee;
-}
+
 .character-marvel img{
-  width: 320px;
+  width: 100%;
   height: 300px;
   float: left;
 }
+.character-marvel .col-md-12{
+  padding: 0;
+}
 .left{
   float: left;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 .info{
   overflow: hidden;
   background-color: #333;
   color: white;
-  padding: 20px;
+  width: 100%;
+  padding: 10px;
   text-align: center;
 }
 .info h1{
   text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 .search-form{
-  width: 50%;
-  margin: 0 auto 30px;
+  width: 100%;
+  margin: 0 auto 0px;
   text-align: center;
 }
 .search-form input[type="text"]{
-  padding: 10px;
-  border-radius: 5px;
+  padding:10px;
+  width: 85%;
+  font-size: 22px;
+  color: red;
+  height: 10vh;
+  border: 0px;
+  border-radius: 0;
+  float: left;
+}
+#app-header .form-group {
+  margin-bottom: 0;
+}
+.search{
+  float: left;
+  height: 10vh;
+  width: 15%;
+  background-color: white;
+  border: 1px solid #eeeeee;
+  margin-left: 0px;
+}
+.search img{
+  padding: 5px;
+  width: 100%;
 }
 
 .loader{
-  background-image: url("../marvel.gif");
+  background-image: url("../image/marvel.gif");
   background-size: cover;
   height: 60vh;
   font-size: 1px;
-}
-.danger{
-  background-color:#000;
-  font-size: 50px;
 }
