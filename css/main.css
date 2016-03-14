@@ -90,3 +90,7 @@ body{
   height: 60vh;
   font-size: 1px;
 }
+.danger{
+  background-color:#000;
+  font-size: 50px;
+}

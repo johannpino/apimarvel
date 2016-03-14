@@ -2,6 +2,12 @@ $(function(){
 
   var $container = $('#app-container').find('.character-marvels');
 
+  $container.on('click', 'button.like', function (ev){
+    var $this = $(this);
+    debugger
+    $this.closest('.character-marvel').addClass('danger')
+  })
+
   function renderResults(result){
     result.forEach(function(resultados){
       var extension = resultados.thumbnail.extension;
@@ -11,7 +17,7 @@ $(function(){
       var description = resultados.description;
       var article = template
       .replace(':name:', name)
-      .replace(':img:', path + punto + extension )
+      .replace(':img:', path ? path + punto + extension : '' )
       .replace(':img alt:', name)
 
       var $article = $(article);
@@ -36,9 +42,10 @@ $(function(){
         $loader.appendTo($container);
         var apikey = "d18b9ec019b4185b639784f1698c9089";
         var url = "http://gateway.marvel.com:80/v1/public/characters";
+        var limit = 100;
 
         $.ajax({
-          data: { name : busqueda , apikey},
+          data: { nameStartsWith : busqueda , limit , apikey},
           url: url ,
           success: function (res, textStatus, xhr){
             $loader.remove();
@@ -58,6 +65,7 @@ $(function(){
       '</div>' +
       '<div class="info">'+
         '<h1>:name:</h1>' +
+        '<button class="like">💖</button>'+
       '</div>'+
     '</article>';
     if (!localStorage.results) {
