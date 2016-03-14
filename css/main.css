@@ -104,7 +104,7 @@ body{
   width: 85%;
   font-size: 22px;
   color: red;
-  height: 10vh;
+  height: 65px;
   border: 0px;
   border-radius: 0;
   float: left;
@@ -114,7 +114,7 @@ body{
 }
 .search{
   float: left;
-  height: 10vh;
+  height: 65px;
   width: 15%;
   background-color: white;
   border: 1px solid #eeeeee;
