@@ -27,14 +27,12 @@ body{
 .search-view.col-md-4{
   padding: 0;
 }
-#app-header h1{
-  color: white;
-  font-size: 2.8em;
-  margin-top: 10px;
-  text-align: left;
-  margin-left: 40px;
-  font-weight:800;
-  text-shadow: 0px 0px 30px rgba(150, 150, 150, 1);
+.img-logo{
+  width: 280px;
+  margin-left: 30px;
+  margin-top:  15px;
+  height: 40px;
+  float: left;
 }
 
 #app-container{
@@ -49,11 +47,13 @@ body{
   min-height: 10vh;
 }
 #app-footer p{
-  width: 40%;
-  text-align: center;
+  width: 90%;
+  border-top: 1px solid #ffcdd2;
+  margin: auto;
   color: #333;
-  margin: 0 auto;
-  padding-top: 30px;
+  font-size: 1em;
+  text-align: right;
+  padding-top: 10px;
 }
 .character-marvels{
   width: 100%;
@@ -82,15 +82,16 @@ body{
 }
 .info{
   overflow: hidden;
-  background-color: #333;
-  color: white;
+  color: black;
   width: 100%;
   padding: 10px;
   text-align: center;
+  background-color: red;
 }
 .info h1{
   text-align: center;
   font-size: 16px;
+  color: white;
   font-weight: bold;
   margin-top: 10px;
 }
@@ -100,9 +101,10 @@ body{
   text-align: center;
 }
 .search-form input[type="text"]{
+  font-family: arial ;
   padding:10px;
   width: 85%;
-  font-size: 22px;
+  font-size: 15px;
   color: red;
   height: 65px;
   border: 0px;
@@ -128,6 +130,29 @@ body{
 .loader{
   background-image: url("../image/marvel.gif");
   background-size: cover;
-  height: 60vh;
+  width: 100%;
+  min-height: 400px;
+  max-height: 600px;
   font-size: 1px;
+}
+.description-character-marvel {
+  padding: 30px;
+}
+.description-character-marvel img{
+  width: 100%;
+}
+
+.button-description{
+  background:transparent;
+  border: 0;
+}
+
+.button-description:active{
+  background:transparent;
+  border: 0;
+}
+.modal-title{
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.5em;
 }

@@ -4,9 +4,10 @@
 }
 @media only screen and (max-width: 768px) {
 
-  #app-header h1 {
-    font-size: 2em;
-    text-align: center;
+  .img-logo {
+    margin: 5px auto ;
+    width: 230px;
+    float: left;
   }
   #app-container{
     padding-top:120px;
@@ -23,6 +24,14 @@
   }
   .search{
     height: 50px;
+  }
+  .modal-title{
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  .description-character-marvel-p{
+    margin-top: 20px;
   }
 
  }
